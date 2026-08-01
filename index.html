@@ -448,14 +448,15 @@
         .planos-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 15px;
             max-width: 1000px;
             margin: 0 auto
         }
 
         @media (min-width:768px) {
             .planos-grid {
-                grid-template-columns: 1fr 1fr
+                grid-template-columns: 1fr 1fr;
+                gap: 60px
             }
         }
 
@@ -872,11 +873,15 @@
                     <img src="imgs/carrossel-3.webp" alt="Demonstrativo 3" loading="lazy">
                     <img src="imgs/carrossel-4.webp" alt="Demonstrativo 4" loading="lazy">
                     <img src="imgs/carrossel-5.webp" alt="Demonstrativo 5" loading="lazy">
+                    <img src="imgs/carrossel-6.webp" alt="Demonstrativo 6" loading="lazy">
+                    <img src="imgs/carrossel-7.webp" alt="Demonstrativo 7" loading="lazy">
                     <img src="imgs/carrossel-1.webp" alt="Demonstrativo 1" loading="lazy">
                     <img src="imgs/carrossel-2.webp" alt="Demonstrativo 2" loading="lazy">
                     <img src="imgs/carrossel-3.webp" alt="Demonstrativo 3" loading="lazy">
                     <img src="imgs/carrossel-4.webp" alt="Demonstrativo 4" loading="lazy">
                     <img src="imgs/carrossel-5.webp" alt="Demonstrativo 5" loading="lazy">
+                    <img src="imgs/carrossel-6.webp" alt="Demonstrativo 6" loading="lazy">
+                    <img src="imgs/carrossel-7.webp" alt="Demonstrativo 7" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1110,7 +1115,7 @@
 
     <!-- BLOCO 8: PLANOS -->
     <section id="planos" class="bg-light text-center">
-        <div class="container">
+        <div class="container" style="padding-bottom: 10px;">
             <h2 class="section-title">Escolha a melhor opção para você:</h2>
             <p class="subheadline" style="margin-bottom:50px">Ambas vêm com garantia de 7 dias.</p>
 
@@ -1190,8 +1195,14 @@
                 position: relative;
                 width: 105%;
                 margin-left: -2.5%;
-                margin-top: 30px;
+                margin-top: 0px;
                 margin-bottom: 20px;
+            }
+
+            @media (min-width: 768px) {
+                .marquee-wrapper {
+                    margin-top: 60px;
+                }
             }
 
             .marquee-bar-static {
