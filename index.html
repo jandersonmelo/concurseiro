@@ -111,7 +111,7 @@
 
         .hl-yellow {
             color: var(--accent-yellow);
-            text-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+            /**text-shadow: 0 0 8px rgba(138, 43, 226, 0.6);**/
             font-weight: 700
         }
 
@@ -839,7 +839,8 @@
     <section class="bg-black-mockup">
         <div class="container hero-grid">
             <div class="hero-left">
-                <h1 class="headline">Revise a Informática que cai no seu concurso com apenas 5 minutos diários no <span
+                <h1 class="headline">Revise a <span class="hl-yellow">INFORMÁTICA</span> que cai no seu <span
+                        class="hl-yellow">CONCURSO</span> com apenas 5 minutos diários no <span
                         class="hl-yellow">FlashReview</span></h1>
             </div>
             <div class="hero-right">
@@ -1171,7 +1172,7 @@
                         <div class="preco-por"><small>R$</small> 27,90</div>
                         <div class="preco-parc">ou 6x de R$ 5,24 no cartão</div>
                     </div>
-                    <a href="https://pay.kiwify.com.br/y8krJ8r" class="btn" style="padding:15px;font-size:1.1rem">QUERO
+                    <a href="https://pay.kiwify.com.br/26csuYn" class="btn" style="padding:15px;font-size:1.1rem">QUERO
                         O COMPLETO</a>
                     <img src="imgs/pagamento-seguro.webp" alt="Pagamento Seguro"
                         style="max-width: 260px; margin: 15px auto 0; opacity: 0.9;">
@@ -1185,19 +1186,38 @@
                 overflow-x: hidden;
             }
 
+            .marquee-wrapper {
+                position: relative;
+                width: 105%;
+                margin-left: -2.5%;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            .marquee-bar-static {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ff9900;
+                transform: rotate(2deg);
+                z-index: 1;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
             .marquee-bar {
                 background-color: var(--accent-blue, #0056b3);
                 color: #ffffff;
                 padding: 15px 0;
-                margin-top: 60px;
-                margin-bottom: 20px;
                 overflow: hidden;
-                width: 105%;
-                margin-left: -2.5%;
+                width: 100%;
                 transform: rotate(-2deg);
                 box-sizing: border-box;
                 display: flex;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                position: relative;
+                z-index: 2;
             }
 
             .marquee-inner {
@@ -1226,20 +1246,23 @@
                 }
             }
         </style>
-        <div class="marquee-bar">
-            <!-- Primeiro grupo -->
-            <div class="marquee-inner">
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
-            </div>
-            <!-- Segundo grupo para loop contínuo -->
-            <div class="marquee-inner" aria-hidden="true">
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
-                <span class="marquee-text-item">APROVEITE AGORA: VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+        <div class="marquee-wrapper">
+            <div class="marquee-bar-static"></div>
+            <div class="marquee-bar">
+                <!-- Primeiro grupo -->
+                <div class="marquee-inner">
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                </div>
+                <!-- Segundo grupo para loop contínuo -->
+                <div class="marquee-inner" aria-hidden="true">
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                    <span class="marquee-text-item">⚠️ APROVEITE AGORA! VOCÊ NÃO VAI ENCONTRAR ESSE PREÇO DEPOIS!</span>
+                </div>
             </div>
         </div>
         <script>
@@ -1367,10 +1390,10 @@
                     <li class="no-check">💎 Acesso Vitalício + Atualizações</li>
                 </ul>
                 <br>
-                <a href="https://pay.kiwify.com.br/eiRL3Cz" class="btn"
+                <a href="https://pay.kiwify.com.br/hL5ioVn" class="btn"
                     style="padding:15px;width:90%;font-size:1.1rem;margin-top:10px">QUERO O COMPLETO POR R$
                     22,90</a><br>
-                <a href="https://pay.kiwify.com.br/Pff3Da4" class="btn-link">Não, quero apenas o básico por R$ 17,90</a>
+                <a href="https://pay.kiwify.com.br/vdA0tof" class="btn-link">Não, quero apenas o básico por R$ 17,90</a>
             </div>
         </div>
     </div>
