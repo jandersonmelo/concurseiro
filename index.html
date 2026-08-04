@@ -842,8 +842,8 @@
         <div class="container hero-grid">
             <div class="hero-left">
                 <h1 class="headline">Revise a <span class="hl-yellow">INFORMÁTICA</span> que cai no seu <span
-                        class="hl-yellow">CONCURSO</span> com apenas 5 minutos diários no <span
-                        class="hl-yellow">App FlashReview</span></h1>
+                        class="hl-yellow">CONCURSO</span> com apenas 5 minutos diários no <span class="hl-yellow">App
+                        FlashReview</span></h1>
             </div>
             <div class="hero-right">
                 <img src="imgs/mockup-principal.webp" alt="Mockup Aplicativo FlashReview" fetchpriority="high"
@@ -1135,9 +1135,9 @@
                         <li class="no-check">🛡️ Garantia de 7 dias</li>
                     </ul>
                     <div class="plano-preco-box">
-                        <div class="preco-de">De R$ 179,00 por:</div>
-                        <div class="preco-por"><small>R$</small> 17,90</div>
-                        <div class="preco-parc">ou 3x de R$ 6,39 no cartão</div>
+                        <div class="preco-de">De R$ 279,00 por:</div>
+                        <div class="preco-por"><small>R$</small> 27,90</div>
+                        <div class="preco-parc">ou 6x de R$ 5,24 no cartão</div>
                     </div>
                     <a href="#" class="btn btn-basico" style="padding:15px;font-size:1.1rem">QUERO O BÁSICO</a>
                     <img src="imgs/pagamento-seguro.webp" alt="Pagamento Seguro"
@@ -1174,9 +1174,9 @@
                         <li class="no-check">🛡️ Garantia de 7 dias</li>
                     </ul>
                     <div class="plano-preco-box">
-                        <div class="preco-de">De R$ 279,00 por:</div>
-                        <div class="preco-por"><small>R$</small> 27,90</div>
-                        <div class="preco-parc">ou 6x de R$ 5,24 no cartão</div>
+                        <div class="preco-de">De R$ 379,00 por:</div>
+                        <div class="preco-por"><small>R$</small> 37,90</div>
+                        <div class="preco-parc">ou 8x de R$ 5,51 no cartão</div>
                     </div>
                     <a href="https://pay.kiwify.com.br/26csuYn" class="btn" style="padding:15px;font-size:1.1rem">QUERO
                         O COMPLETO</a>
@@ -1389,10 +1389,10 @@
                 <p style="font-size:1.1rem;margin-top:10px">Leve o <strong>PLANO COMPLETO</strong> com todos os bônus.
                 </p>
                 <div class="popup-prices">
-                    <span class="price-old">De R$ 27,90</span> por <br>
-                    <span class="price-new">R$ 22,90</span><br>
-                    <span style="font-size: 1rem; color: #7f8c8d; display: inline-block; margin-top: 5px;">ou 5x de R$
-                        5,07 no cartão</span>
+                    <span class="price-old">De R$ 37,90</span> por <br>
+                    <span class="price-new">R$ 32,90</span><br>
+                    <span style="font-size: 1rem; color: #7f8c8d; display: inline-block; margin-top: 5px;">ou 7x de R$
+                        5,38 no cartão</span>
                 </div>
                 <img src="imgs/plano-completo.webp" alt="Plano Completo">
                 <ul class="prod-list"
@@ -1404,8 +1404,8 @@
                 <br>
                 <a href="https://pay.kiwify.com.br/hL5ioVn" class="btn"
                     style="padding:15px;width:90%;font-size:1.1rem;margin-top:10px">QUERO O COMPLETO POR R$
-                    22,90</a><br>
-                <a href="https://pay.kiwify.com.br/vdA0tof" class="btn-link">Não, quero apenas o básico por R$ 17,90</a>
+                    32,90</a><br>
+                <a href="https://pay.kiwify.com.br/vdA0tof" class="btn-link">Não, quero apenas o básico por R$ 27,90</a>
             </div>
         </div>
     </div>
@@ -1415,10 +1415,90 @@
         document.getElementById('ano-atual').textContent = new Date().getFullYear();
         document.querySelectorAll('.faq-question').forEach(e => { e.addEventListener('click', () => { let a = e.nextElementSibling; let o = a.style.display === 'block'; document.querySelectorAll('.faq-answer').forEach(x => x.style.display = 'none'); document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active')); if (!o) { a.style.display = 'block'; e.classList.add('active') } }) });
         document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function (e) { const t = this.getAttribute('href'); if (t === '#') return; e.preventDefault(); const g = document.querySelector(t); if (g) g.scrollIntoView({ behavior: 'smooth' }) }) });
-        const track = document.getElementById('carousel'); let isDown = !1, startX, scrollLeft, autoScroll = !0; if (track) { track.addEventListener('mousedown', e => { isDown = !0; autoScroll = !1; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft }); track.addEventListener('mouseleave', () => { isDown = !1; autoScroll = !0 }); track.addEventListener('mouseup', () => { isDown = !1; autoScroll = !0 }); track.addEventListener('mousemove', e => { if (!isDown) return; e.preventDefault(); const x = e.pageX - track.offsetLeft; const w = (x - startX) * 2; track.scrollLeft = scrollLeft - w }); track.addEventListener('touchstart', () => { autoScroll = !1 }, { passive: !0 }); track.addEventListener('touchend', () => { autoScroll = !0 }, { passive: !0 }); function step() { if (autoScroll) { track.scrollLeft += 1; if (track.scrollLeft >= track.scrollWidth / 2) { track.scrollLeft = 0 } } requestAnimationFrame(step) } requestAnimationFrame(step) }
-        const popup = document.getElementById('popupOferta'); let timerInterval; function startTimer() { clearInterval(timerInterval); let d = 15 * 60; let ds = document.getElementById('timer'); ds.textContent = "15:00"; timerInterval = setInterval(() => { if (--d < 0) { clearInterval(timerInterval); d = 0; } let m = parseInt(d / 60, 10); let s = parseInt(d % 60, 10); m = m < 10 ? "0" + m : m; s = s < 10 ? "0" + s : s; ds.textContent = m + ":" + s; }, 1000) }
-        document.querySelectorAll('.btn-basico').forEach(b => { b.addEventListener('click', e => { e.preventDefault(); popup.style.display = 'flex'; startTimer(); if (typeof confetti === 'function') confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, zIndex: 10000 }); }) });
-        document.querySelectorAll('.close-popup,.close-popup-text').forEach(b => { b.addEventListener('click', e => { e.preventDefault(); popup.style.display = 'none'; clearInterval(timerInterval); }) });
+        const track = document.getElementById('carousel');
+        let isDown = false, startX, scrollLeft, autoScroll = true;
+        if (track) {
+            track.addEventListener('mousedown', e => { isDown = true; autoScroll = false; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft });
+            track.addEventListener('mouseleave', () => { isDown = false; autoScroll = true });
+            track.addEventListener('mouseup', () => { isDown = false; autoScroll = true });
+            track.addEventListener('mousemove', e => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - track.offsetLeft;
+                const w = (x - startX) * 2;
+                track.scrollLeft = scrollLeft - w;
+                if (track.scrollLeft >= track.scrollWidth / 2) {
+                    track.scrollLeft -= track.scrollWidth / 2;
+                    startX = e.pageX - track.offsetLeft;
+                    scrollLeft = track.scrollLeft;
+                } else if (track.scrollLeft <= 0) {
+                    track.scrollLeft += track.scrollWidth / 2;
+                    startX = e.pageX - track.offsetLeft;
+                    scrollLeft = track.scrollLeft;
+                }
+            });
+            track.addEventListener('touchstart', () => { autoScroll = false }, { passive: true });
+            track.addEventListener('touchend', () => { autoScroll = true }, { passive: true });
+            track.addEventListener('scroll', () => {
+                if (isDown) return;
+                if (track.scrollLeft >= track.scrollWidth / 2) track.scrollLeft -= track.scrollWidth / 2;
+                else if (track.scrollLeft <= 0) track.scrollLeft += track.scrollWidth / 2;
+            });
+            function step() {
+                if (autoScroll) {
+                    track.scrollLeft += 1;
+                    if (track.scrollLeft >= track.scrollWidth / 2) { track.scrollLeft = 0 }
+                }
+                requestAnimationFrame(step)
+            }
+            requestAnimationFrame(step)
+        }
+
+        const popup = document.getElementById('popupOferta');
+        let timerInterval;
+        function startTimer() {
+            clearInterval(timerInterval);
+            let endTime = localStorage.getItem('ofertaEndTime');
+            if (!endTime) {
+                endTime = Date.now() + 15 * 60 * 1000;
+                localStorage.setItem('ofertaEndTime', endTime);
+            }
+            let ds = document.getElementById('timer');
+            function updateDisplay() {
+                let now = Date.now();
+                let d = Math.floor((endTime - now) / 1000);
+                if (d < 0) d = 0;
+                let m = parseInt(d / 60, 10);
+                let s = parseInt(d % 60, 10);
+                m = m < 10 ? "0" + m : m;
+                s = s < 10 ? "0" + s : s;
+                ds.textContent = m + ":" + s;
+                if (d <= 0) clearInterval(timerInterval);
+            }
+            updateDisplay();
+            timerInterval = setInterval(updateDisplay, 1000);
+        }
+
+        document.querySelectorAll('.btn-basico').forEach(b => {
+            b.addEventListener('click', e => {
+                e.preventDefault();
+                popup.style.display = 'flex';
+                startTimer();
+                let confettiShown = localStorage.getItem('confettiShown');
+                if (!confettiShown && typeof confetti === 'function') {
+                    confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, zIndex: 10000 });
+                    localStorage.setItem('confettiShown', 'true');
+                }
+            })
+        });
+
+        document.querySelectorAll('.close-popup,.close-popup-text').forEach(b => {
+            b.addEventListener('click', e => {
+                e.preventDefault();
+                popup.style.display = 'none';
+                clearInterval(timerInterval);
+            })
+        });
 
         const today = new Date();
         const dateStr = ('0' + today.getDate()).slice(-2) + '/' + ('0' + (today.getMonth() + 1)).slice(-2) + '/' + today.getFullYear();
